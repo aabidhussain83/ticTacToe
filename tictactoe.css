@@ -44,12 +44,13 @@ hr {
     border: blue 3px;
     border-radius: 5px;
     background-color: rgb(13, 204, 143);
-    margin: 0px;
+    margin: 10px;
     cursor: pointer;
 }
 
 #div1{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .name{
@@ -64,5 +65,4 @@ hr {
 #announce{
     font-size: 20px;
     color: rgb(13, 204, 143);
-    margin-top: 15px;
 }
