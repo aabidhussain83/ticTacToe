@@ -7,6 +7,8 @@ var sign=['O','X'];
 
 let tiles = document.querySelectorAll('.tile');
 
+document.getElementById('announce').innerText=pName[currPlayer]+"'s turn";
+
 tiles.forEach(tile => {
   tile.addEventListener('click', function handleClick(event) {
     console.log('box clicked   '+tile.id, event);
@@ -24,12 +26,15 @@ tiles.forEach(tile => {
     tile.setAttribute('style', 'background-color: yellow;');
     tile.innerText=sign[currPlayer];
 
+    currPlayer=currPlayer^1;
+    document.getElementById('announce').innerText=pName[currPlayer]+"'s turn";
+
     if(isWon())
      {  
-        document.getElementById('announce').innerText=pName[currPlayer]+" won the match";
+        document.getElementById('announce').innerText=pName[currPlayer^1]+" won the match";
      }
     
-     currPlayer=currPlayer^1;
+     
 
   });
 });
